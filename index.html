@@ -3,6 +3,25 @@
 
 <head>
 
+	<!-- Event snippet for @ Submit lead form conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17897643968/aFRvCPS0kZAcEMC_odZC',
+      'value': 10.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 	<script>
   gtag('config', 'AW-17897643968/c4_MCLT4jpAcEMC_odZC', {
     'phone_conversion_number': 'REPLACE WITH VALUE'
